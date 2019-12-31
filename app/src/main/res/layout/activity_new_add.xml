@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewActivityAdd">
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- <com.github.sundeepk.compactcalendarview.CompactCalendarView
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/compactcalendar_view"
+             android:layout_width="fill_parent"
+             android:paddingRight="10dp"
+             android:paddingLeft="10dp"
+             android:layout_height="250dp"
+             app:compactCalendarTargetHeight="250dp"
+             app:compactCalendarTextSize="12sp"
+             app:compactCalendarBackgroundColor="#fff"
+             app:compactCalendarTextColor="#000"
+             app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+             app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
+             app:compactCalendarMultiEventIndicatorColor="#fff"
+             />-->
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></CalendarView>
+
+        <ListView
+            android:id="@+id/activity_list"
+            android:layout_below="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ListView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_add_black_24dp"/>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

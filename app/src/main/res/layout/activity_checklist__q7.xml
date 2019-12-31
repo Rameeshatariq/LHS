@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checklist.Checklist_Q7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_rectangle_shape">
+
+        <RelativeLayout
+            android:id="@+id/rl_home_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:id="@+id/rlMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:text="Check List"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_navigation_drawer"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_home"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_home_black_24dp"
+                    android:tint="@color/color_white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_editform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/rl_home"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_editform"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:padding="@dimen/_6sdp"
+                    android:tint="@color/color_white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_home_top">
+
+            <com.github.captain_miao.optroundcardview.OptRoundCardView
+                android:id="@+id/childregister_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                app:optRoundCardBackgroundColor="@color/color_white"
+                app:optRoundCardBottomEdges="false"
+                app:optRoundCardCornerRadius="20dp"
+                app:optRoundCardLeftBottomCorner="false"
+                app:optRoundCardRightBottomCorner="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/checklist_q1"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q7"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color"/>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/checklist_q1"
+                    android:scrollbarSize="0dp"
+                    android:scrollbarThumbVertical="@color/color_white">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/checklist_q1"
+                        android:paddingBottom="@dimen/_30sdp">
+
+
+                        <TableLayout
+                            android:id="@+id/table_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/checklist_q1"
+                            android:padding="@dimen/_10sdp"
+                            tools:ignore="NotSibling">
+
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.1"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+                                    <CheckBox
+                                        android:visibility="gone"
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:background="?android:attr/listChoiceIndicatorMultiple"
+                                        android:backgroundTint="@color/pink_color"
+                                        android:button="@null"
+                                        android:scaleY="1" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.1"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.1"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.1"
+                                        android:background="@drawable/custom_checkbox_layout"
+                                        android:button="@null"
+                                        android:textColor="@color/hp_listview_textview_redcolor"
+                                        android:visibility="gone" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.1"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.2"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.2"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.2"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.2"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.3"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.3"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.3"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.3"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.4"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.4"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.4"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.4"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.5"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_7.5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.5"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.5"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.5"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/q7.6"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/_16sdp"
+                                    android:textStyle="bold" />
+
+
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_7.6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="5dp">
+
+
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_haan_7.6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+                                    <TextView
+                                        android:id="@+id/txt_haan_7.6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@id/checkbox_haan_7.6"
+                                        android:text="@string/haan_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+                                    <com.rey.material.widget.CheckBox
+                                        android:id="@+id/checkbox_nahi_7.6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="@dimen/_15sdp"
+                                        android:layout_toLeftOf="@+id/txt_haan_7.6"
+                                        app:cbd_boxSize="@dimen/_25sdp"
+                                        app:cbd_cornerRadius="0dp"
+                                        app:cbd_height="@dimen/_40sdp"
+                                        app:cbd_strokeColor="@color/pink_color"
+                                        app:cbd_strokeSize="1dp"
+                                        app:cbd_tickColor="#FFFFFF"
+                                        app:cbd_width="@dimen/_40sdp" />
+
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/checkbox_nahi_7.6"
+                                        android:text="@string/nahi_text"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_16sdp" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </TableLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/table_layout"
+                            android:weightSum="2">
+
+
+                            <Button
+                                android:id="@+id/btn_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/table_layout"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/login_button_shape_layout"
+                                android:text="Save"
+                                android:textAllCaps="false"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <Button
+                                android:id="@+id/btn_save_next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/table_layout"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:background="@drawable/login_button_shape_layout"
+                                android:text="Save and Next"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/_15sdp" />
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+
+                </ScrollView>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbProgress"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_shape_layout"
+                    android:indeterminateDrawable="@drawable/circular_progressbar_layout"
+                    android:visibility="gone" />
+
+            </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

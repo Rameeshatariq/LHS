@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cv.lhs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_hayat_logo_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Checklist.LHS_Checklist"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q1"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q2"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q3"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q4"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q5"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q7"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q6"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q8"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q9"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q10"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q11"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q12"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist.Checklist_Q13"
+            android:launchMode="singleTask" />
+        <activity android:name=".Checklist.Checklist_Q14" />
+        <activity android:name=".Checklist.Checklist_Q15" />
+        <activity android:name=".Checklist.Checklist_Q16" />
+        <activity
+            android:name=".Checklist.Checklist_Q17"
+            android:launchMode="singleTask" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".NewActivityAdd"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Checklist_Validation_Button"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Sync_Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Execution"
+            android:launchMode="singleTask" />
+        <activity android:name=".Validation" />
+        <activity android:name=".Monthly_Report"></activity>
+    </application>
+
+</manifest>
