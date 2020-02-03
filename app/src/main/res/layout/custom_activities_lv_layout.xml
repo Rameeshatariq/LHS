@@ -77,19 +77,29 @@
                 android:textAllCaps="false"
                 android:textColor="@color/text_color"
                 android:visibility="gone" />
-
             <Button
                 android:id="@+id/execute"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_5sdp"
                 android:background="@color/pink_color"
                 android:text="Execute"
                 android:layout_centerVertical="true"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/_10sdp" />
+
+            <ImageView
+                android:id="@+id/iv_refresh"
+                android:layout_toLeftOf="@+id/execute"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_refresh_black_24dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
         </RelativeLayout>
     </LinearLayout>
 

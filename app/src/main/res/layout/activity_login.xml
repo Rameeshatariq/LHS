@@ -24,10 +24,22 @@
             android:background="@drawable/login_oval_background">
 
             <ImageView
+                android:id="@+id/img_logo"
                 android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_150sdp"
                 android:layout_centerInParent="true"
                 android:src="@mipmap/ic_hayat_logo_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LHS"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_logo"
+                android:fontFamily="@font/droid_naskh_bold"
+                android:textColor="@color/light_blue_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp" />
 
         </RelativeLayout>
 
@@ -165,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/raleway_medium"
                     android:layout_marginLeft="@dimen/_5sdp"
-                    android:text="11-12-2019"
+                    android:text="03-02-2020"
                     android:textColor="@color/color_white"
                     android:textSize="@dimen/_12sdp" />
 
@@ -179,7 +191,7 @@
                 android:layout_below="@+id/rl_sync"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/raleway_medium"
-                android:text="Version: 1.0.1"
+                android:text="Version: 4.0.2"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/_12sdp" />
 

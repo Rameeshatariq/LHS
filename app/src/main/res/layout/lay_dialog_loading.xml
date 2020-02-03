@@ -17,10 +17,10 @@
             android:id="@+id/tvMainTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:background="@color/color_white"
-            android:text="پروسیسنگ"
+            android:text="Processing"
             android:textColor="@color/dark_blue_color"
             android:textSize="@dimen/_20sdp"
             />
@@ -30,11 +30,11 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
             android:layout_below="@+id/tvMainTitle"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@color/color_white"
-            android:text="برائے مہربانی انتظار کریں"
+            android:text="Please Wait..."
             android:textColor="@color/dark_blue_color"
             android:textSize="@dimen/_16sdp" />
 
@@ -43,7 +43,7 @@
             android:layout_width="@dimen/_55sdp"
             android:layout_height="@dimen/_55sdp"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:indeterminateDrawable="@drawable/circular_progressbar_layout"
             android:indeterminateTintMode="src_atop" />
 

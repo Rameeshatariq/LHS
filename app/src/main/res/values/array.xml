@@ -2,7 +2,6 @@
 <resources>
 
     <string-array name="hw_hc_list">
-        <item>Health Centre</item>
         <item>Health Worker</item>
     </string-array>
 
