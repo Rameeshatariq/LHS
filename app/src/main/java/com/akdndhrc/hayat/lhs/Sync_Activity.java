@@ -592,19 +592,19 @@ public class Sync_Activity extends AppCompatActivity {
         }
 
         try {
-            String[][] validate_image = ls.executeReader("Select is_synced from validation where activity_id = '" + activity_id + "' ");
+            String[][] validate_image = ls.executeReader("Select * from validation where activity_id = '" + activity_id + "' ");
 
             for (int j = 0; j < validate_image.length; j++) {
 
-                if (validate_image[j][0].toString().equals("1")) {
+                if (validate_image[j][10].toString().equals("1")) {
 
-                } else if (validate_image[j][0].toString().equals("0")) {
-                    String[][] validate_image_Data = ls.executeReader("Select * from validation where activity_id = '" + activity_id + "' AND is_synced = 0 ");
+                } else if (validate_image[j][10].toString().equals("0")) {
+                  //  String[][] validate_image_Data = ls.executeReader("Select from validation where activity_id = '" + activity_id + "' AND is_synced = 0 ");
 
-                    Log.d("000999", "val data length: " + validate_image_Data.length);
+                  //  Log.d("000999", "val data length: " + validate_image_Data.length);
 
-                    for (int i = 0; i < validate_image_Data.length; i++) {
-                        String image_path = validate_image_Data[i][6].toString();
+                  //  for (int i = 0; i < validate_image_Data.length; i++) {
+                        String image_path = validate_image[j][6].toString();
                         Log.d("000999", "createImageFile: " + image_path);
 
                         try {
@@ -614,13 +614,14 @@ public class Sync_Activity extends AppCompatActivity {
                             bitmap = BitmapFactory.decodeStream(new FileInputStream(image_path), null, options);
                             Log.d("000999", "createImageFile: " + bitmap);
 
+                            uploadImage(bitmap, validate_image[j][9], validate_image[j][1], validate_image[j][2], validate_image[j][7],
+                                    validate_image[j][4], validate_image[j][5], jobj.toString());
+
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
 
-                        uploadImage(bitmap, validate_image_Data[0][9], validate_image_Data[0][1], validate_image_Data[0][2], validate_image_Data[0][7],
-                                validate_image_Data[0][4], validate_image_Data[0][5], jobj.toString());
-                    }
+
                 }
             }
         }

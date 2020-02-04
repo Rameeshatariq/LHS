@@ -668,7 +668,7 @@ public class Validate_Image extends AppCompatActivity {
                                 ls.createAndOpenDB();
                                 String update_record = "UPDATE validation SET " +
                                         "is_synced='" + String.valueOf(1) + "' " +
-                                        "WHERE activity_id = '" + activity_id + "' ";
+                                        "WHERE activity_id = '" + activity_id + "' AND type = '"+type+"' AND member_id = '"+member_id+"' ";
                                 ls.executeNonQuery(update_record);
 
                                 String update_record_val = "UPDATE Activities SET " +
