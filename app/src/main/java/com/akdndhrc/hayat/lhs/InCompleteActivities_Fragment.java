@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.akdndhrc.hayat.lhs.Adapter.Activities_Adapter;
+import com.akdndhrc.hayat.lhs.Adapter.PreviousActivities_Adapter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class InCompleteActivities_Fragment extends Fragment {
     static ArrayList<String> arrayListyear = new ArrayList<>();
     static ArrayList<String> arrayListstatus = new ArrayList<>();
 
-    Activities_Adapter adt;
+    PreviousActivities_Adapter adt;
     String mData[][];
     String TodayDate;
 
@@ -71,7 +72,7 @@ public class InCompleteActivities_Fragment extends Fragment {
             }
 
 
-            adt = new Activities_Adapter(getActivity(), arrayListactivity, arrayListDate, arrayListId,arrayListmonth, arrayListyear,arrayListstatus);
+            adt = new PreviousActivities_Adapter(getActivity(), arrayListactivity, arrayListDate, arrayListId,arrayListmonth, arrayListyear,arrayListstatus);
             adt.notifyDataSetChanged();
             activities_List.setAdapter(adt);
 

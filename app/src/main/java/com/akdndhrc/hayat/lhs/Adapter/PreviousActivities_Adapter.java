@@ -3,6 +3,7 @@ package com.akdndhrc.hayat.lhs.Adapter;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Handler;
@@ -182,6 +183,7 @@ public class PreviousActivities_Adapter extends BaseAdapter {
         if(holder1.activities_lv_status.getText().toString().equals("1")){
             holder1.activities_lv_status.setVisibility(View.VISIBLE);
             holder1.activities_lv_status.setText("Completed");
+            holder1.execute.setBackgroundColor(ctx.getResources().getColor(R.color.chtr_dpt_green_txt_color));
         }
 
        /* if(holder1.activities_lv_status.getText().toString().equals("Completed")) {

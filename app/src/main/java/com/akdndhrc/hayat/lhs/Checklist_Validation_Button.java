@@ -53,11 +53,11 @@ public class Checklist_Validation_Button extends AppCompatActivity {
     String added_on,added_by;
     JSONObject jobj;
     TextView count_q1, count_q2, count_q3, count_q4, count_q5, count_q6, count_q7,count_q8,count_q9,count_q10,count_q11,count_q12,count_q13,
-            count_q14,count_q15,count_q16,count_q17;
+            count_q14,count_q15,count_q16,count_q17,total_yes_count,per_yes_count;
     TextView count_no_q1, count_no_q2, count_no_q3, count_no_q4, count_no_q5, count_no_q6,count_no_q7,count_no_q8,count_no_q9,count_no_q10,count_no_q11,
-            count_no_q12,count_no_q13,count_no_q14,count_no_q15,count_no_q16,count_no_q17;
+            count_no_q12,count_no_q13,count_no_q14,count_no_q15,count_no_q16,count_no_q17,total_no_count,per_no_count;
     TextView count_na_q1, count_na_q2, count_na_q3, count_na_q4, count_na_q5, count_na_q6, count_na_q7,count_na_q8,count_na_q9,count_na_q10,count_na_q11,
-            count_na_q12,count_na_q13,count_na_q14,count_na_q15,count_na_q16,count_na_q17;
+            count_na_q12,count_na_q13,count_na_q14,count_na_q15,count_na_q16,count_na_q17,total_na_count,per_na_count;
     String  q1_count[][], q2_count[][], q3_count[][], q4_count[][], q5_count[][], q6_count[][], q7_count[][],q8_count[][],q9_count[][],q10_count[][],
             q11_count[][],q12_count[][],q13_count[][],q14_count[][],q15_count[][],q16_count[][],q17_count[][],q18_count[][];
     Switch status;
@@ -66,9 +66,13 @@ public class Checklist_Validation_Button extends AppCompatActivity {
     Lister ls;
 
     TextView heading,date,no_validated,tv_count, tv_formula, month;
+    Float total_count, per_yes, yes_count_q1, yes_count_q2, yes_count_q3, yes_count_q4, yes_count_q5, yes_count_q6,yes_count_q7, yes_count_q8,
+            yes_count_q9, yes_count_q10, yes_count_q11, yes_count_q12,yes_count_q13, yes_count_q14, yes_count_q15, yes_count_q16, yes_count_q17;
+    Float total_count_no,per_no, no_count_q1, no_count_q2, no_count_q3, no_count_q4, no_count_q5, no_count_q6,no_count_q7, no_count_q8,
+            no_count_q9, no_count_q10, no_count_q11, no_count_q12,no_count_q13, no_count_q14, no_count_q15, no_count_q16, no_count_q17;
+    Float total_count_na,per_na, na_count_q1, na_count_q2, na_count_q3, na_count_q4, na_count_q5, na_count_q6,na_count_q7, na_count_q8,
+            na_count_q9, na_count_q10, na_count_q11, na_count_q12,na_count_q13, na_count_q14, na_count_q15, na_count_q16, na_count_q17;
 
-    Float total_count, yes_count_mp, yes_count_im, yes_count_ka, yes_count_s, yes_count_r, yes_count_vm;
-    String count_mp, count_im, countka, count_s, count_r, count_vm, count_validated;
     String  mDataHealth[][], mDataFacility[][], mp_count[][], im_count[][], ka_count[][], s_count[][], vm_count[][], r_count[][];
 
     @Override
@@ -163,6 +167,13 @@ public class Checklist_Validation_Button extends AppCompatActivity {
         count_na_q16=(TextView)findViewById(R.id.tv_q16_na_count);
         count_na_q17=(TextView)findViewById(R.id.tv_q17_na_count);
 
+        total_yes_count=(TextView)findViewById(R.id.tv_total_yes_count);
+        total_no_count=(TextView)findViewById(R.id.tv_total_no_count);
+        total_na_count=(TextView)findViewById(R.id.tv_total_na_count);
+        per_yes_count=(TextView)findViewById(R.id.tv_per_yes_count);
+        per_no_count=(TextView)findViewById(R.id.tv_per_no_count);
+        per_na_count=(TextView)findViewById(R.id.tv_per_na_count);
+
         status=(Switch) findViewById(R.id.switch_status);
         comp=(Button) findViewById(R.id.comp);
 
@@ -225,6 +236,9 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                     sendPostRequest(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
                             activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
 
+                    sendPostRequestLocal(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
+                            activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
+
                 }
             }
         });
@@ -270,12 +284,21 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q1.setText(q1_count[0][0]);
                         count_no_q1.setText(q1_count[0][1]);
                         count_na_q1.setText(q1_count[0][2]);
+
+                        yes_count_q1 = Float.parseFloat(q1_count[0][0]);
+                        no_count_q1 = Float.parseFloat(q1_count[0][1]);
+                        na_count_q1 = Float.parseFloat(q1_count[0][2]);
+
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q1.setText("0");
                     count_no_q1.setText("0");
                     count_na_q1.setText("0");
+
+                yes_count_q1 = Float.parseFloat("0");
+                no_count_q1 = Float.parseFloat("0");
+                na_count_q1 = Float.parseFloat("0");
                 }
 
 
@@ -285,12 +308,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q2.setText(q2_count[0][0]);
                         count_no_q2.setText(q2_count[0][1]);
                         count_na_q2.setText(q2_count[0][2]);
+
+                        yes_count_q2 = Float.parseFloat(q2_count[0][0]);
+                        no_count_q2 = Float.parseFloat(q2_count[0][1]);
+                        na_count_q2 = Float.parseFloat(q2_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q2.setText("0");
                     count_no_q2.setText("0");
                     count_na_q2.setText("0");
+
+                    yes_count_q2 = Float.parseFloat("0");
+                    no_count_q2 = Float.parseFloat("0");
+                    na_count_q2 = Float.parseFloat("0");
                 }
 
                 try {
@@ -299,12 +330,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q3.setText(q3_count[0][0]);
                         count_no_q3.setText(q3_count[0][1]);
                         count_na_q3.setText(q3_count[0][2]);
+
+                        yes_count_q3 = Float.parseFloat(q3_count[0][0]);
+                        no_count_q3 = Float.parseFloat(q3_count[0][1]);
+                        na_count_q3 = Float.parseFloat(q3_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q3.setText("0");
                     count_no_q3.setText("0");
                     count_na_q3.setText("0");
+
+                    yes_count_q3 = Float.parseFloat("0");
+                    no_count_q3 = Float.parseFloat("0");
+                    na_count_q3 = Float.parseFloat("0");
                 }
 
                 try {
@@ -313,12 +352,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q4.setText(q4_count[0][0]);
                         count_no_q4.setText(q4_count[0][1]);
                         count_na_q4.setText(q4_count[0][2]);
+
+                        yes_count_q4 = Float.parseFloat(q4_count[0][0]);
+                        no_count_q4 = Float.parseFloat(q4_count[0][1]);
+                        na_count_q4 = Float.parseFloat(q4_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q4.setText("0");
                     count_no_q4.setText("0");
                     count_na_q4.setText("0");
+
+                    yes_count_q4 = Float.parseFloat("0");
+                    no_count_q4 = Float.parseFloat("0");
+                    na_count_q4 = Float.parseFloat("0");
                 }
 
                 try {
@@ -327,12 +374,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q5.setText(q5_count[0][0]);
                         count_no_q5.setText(q5_count[0][1]);
                         count_na_q5.setText(q5_count[0][2]);
+
+                        yes_count_q5 = Float.parseFloat(q5_count[0][0]);
+                        no_count_q5 = Float.parseFloat(q5_count[0][1]);
+                        na_count_q5 = Float.parseFloat(q5_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q5.setText("0");
                     count_no_q5.setText("0");
                     count_na_q5.setText("0");
+
+                    yes_count_q5 = Float.parseFloat("0");
+                    no_count_q5 = Float.parseFloat("0");
+                    na_count_q5 = Float.parseFloat("0");
                 }
 
                 try {
@@ -341,12 +396,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q6.setText(q6_count[0][0]);
                         count_no_q6.setText(q6_count[0][1]);
                         count_na_q6.setText(q6_count[0][2]);
+
+                        yes_count_q6 = Float.parseFloat(q6_count[0][0]);
+                        no_count_q6 = Float.parseFloat(q6_count[0][1]);
+                        na_count_q6 = Float.parseFloat(q6_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q6.setText("0");
                     count_no_q6.setText("0");
                     count_na_q6.setText("0");
+
+                    yes_count_q6 = Float.parseFloat("0");
+                    no_count_q6 = Float.parseFloat("0");
+                    na_count_q6 = Float.parseFloat("0");
                 }
 
                 try {
@@ -355,12 +418,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q7.setText(q7_count[0][0]);
                         count_no_q7.setText(q7_count[0][1]);
                         count_na_q7.setText(q7_count[0][2]);
+
+                        yes_count_q7 = Float.parseFloat(q7_count[0][0]);
+                        no_count_q7 = Float.parseFloat(q7_count[0][1]);
+                        na_count_q7 = Float.parseFloat(q7_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q7.setText("0");
                     count_no_q7.setText("0");
                     count_na_q7.setText("0");
+
+                    yes_count_q7 = Float.parseFloat("0");
+                    no_count_q7 = Float.parseFloat("0");
+                    na_count_q7 = Float.parseFloat("0");
                 }
 
                 try {
@@ -369,12 +440,21 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q8.setText(q8_count[0][0]);
                         count_no_q8.setText(q8_count[0][1]);
                         count_na_q8.setText(q8_count[0][2]);
+
+
+                        yes_count_q8 = Float.parseFloat(q8_count[0][0]);
+                        no_count_q8 = Float.parseFloat(q8_count[0][1]);
+                        na_count_q8 = Float.parseFloat(q8_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q8.setText("0");
                     count_no_q8.setText("0");
                     count_na_q8.setText("0");
+
+                    yes_count_q8 = Float.parseFloat("0");
+                    no_count_q8 = Float.parseFloat("0");
+                    na_count_q8 = Float.parseFloat("0");
                 }
 
                 try {
@@ -383,12 +463,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q9.setText(q9_count[0][0]);
                         count_no_q9.setText(q9_count[0][1]);
                         count_na_q9.setText(q9_count[0][2]);
+
+                        yes_count_q9 = Float.parseFloat(q9_count[0][0]);
+                        no_count_q9 = Float.parseFloat(q9_count[0][1]);
+                        na_count_q9 = Float.parseFloat(q9_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q9.setText("0");
                     count_no_q9.setText("0");
                     count_na_q9.setText("0");
+
+                    yes_count_q9 = Float.parseFloat("0");
+                    no_count_q9 = Float.parseFloat("0");
+                    na_count_q9 = Float.parseFloat("0");
                 }
 
                 try {
@@ -397,12 +485,21 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q10.setText(q10_count[0][0]);
                         count_no_q10.setText(q10_count[0][1]);
                         count_na_q10.setText(q10_count[0][2]);
+
+
+                        yes_count_q10 = Float.parseFloat(q10_count[0][0]);
+                        no_count_q10 = Float.parseFloat(q10_count[0][1]);
+                        na_count_q10 = Float.parseFloat(q10_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q10.setText("0");
                     count_no_q10.setText("0");
                     count_na_q10.setText("0");
+
+                    yes_count_q10 = Float.parseFloat("0");
+                    no_count_q10 = Float.parseFloat("0");
+                    na_count_q10 = Float.parseFloat("0");
                 }
 
                 try {
@@ -411,12 +508,21 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q11.setText(q11_count[0][0]);
                         count_no_q11.setText(q11_count[0][1]);
                         count_na_q11.setText(q11_count[0][2]);
+
+
+                        yes_count_q11 = Float.parseFloat(q11_count[0][0]);
+                        no_count_q11 = Float.parseFloat(q11_count[0][1]);
+                        na_count_q11 = Float.parseFloat(q11_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q11.setText("0");
                     count_no_q11.setText("0");
                     count_na_q11.setText("0");
+
+                    yes_count_q11 = Float.parseFloat("0");
+                    no_count_q11 = Float.parseFloat("0");
+                    na_count_q11 = Float.parseFloat("0");
                 }
 
                 try {
@@ -425,12 +531,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q12.setText(q12_count[0][0]);
                         count_no_q12.setText(q12_count[0][1]);
                         count_na_q12.setText(q12_count[0][2]);
+
+                        yes_count_q12 = Float.parseFloat(q12_count[0][0]);
+                        no_count_q12 = Float.parseFloat(q12_count[0][1]);
+                        na_count_q12 = Float.parseFloat(q12_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q12.setText("0");
                     count_no_q12.setText("0");
                     count_na_q12.setText("0");
+
+                    yes_count_q12 = Float.parseFloat("0");
+                    no_count_q12 = Float.parseFloat("0");
+                    na_count_q12 = Float.parseFloat("0");
                 }
 
                 try {
@@ -439,12 +553,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q13.setText(q13_count[0][0]);
                         count_no_q13.setText(q13_count[0][1]);
                         count_na_q13.setText(q13_count[0][2]);
+
+                        yes_count_q13 = Float.parseFloat(q13_count[0][0]);
+                        no_count_q13 = Float.parseFloat(q13_count[0][1]);
+                        na_count_q13 = Float.parseFloat(q13_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q13.setText("0");
                     count_no_q13.setText("0");
                     count_na_q13.setText("0");
+
+                    yes_count_q13 = Float.parseFloat("0");
+                    no_count_q13 = Float.parseFloat("0");
+                    na_count_q13 = Float.parseFloat("0");
                 }
 
                 try {
@@ -453,12 +575,21 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q14.setText(q14_count[0][0]);
                         count_no_q14.setText(q14_count[0][1]);
                         count_na_q14.setText(q14_count[0][2]);
+
+
+                        yes_count_q14 = Float.parseFloat(q14_count[0][0]);
+                        no_count_q14 = Float.parseFloat(q14_count[0][1]);
+                        na_count_q14 = Float.parseFloat(q14_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q14.setText("0");
                     count_no_q14.setText("0");
                     count_na_q14.setText("0");
+
+                    yes_count_q14 = Float.parseFloat("0");
+                    no_count_q14 = Float.parseFloat("0");
+                    na_count_q14 = Float.parseFloat("0");
                 }
                 try {
                     q15_count = ls.executeReader("Select question15_count, question15_no_count, question15_na_count from Question15 where activity_id = '" + activity_id + "' ");
@@ -466,12 +597,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q15.setText(q15_count[0][0]);
                         count_no_q15.setText(q15_count[0][1]);
                         count_na_q15.setText(q15_count[0][2]);
+
+                        yes_count_q15 = Float.parseFloat(q15_count[0][0]);
+                        no_count_q15 = Float.parseFloat(q15_count[0][1]);
+                        na_count_q15 = Float.parseFloat(q15_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q15.setText("0");
                     count_no_q15.setText("0");
                     count_na_q15.setText("0");
+
+                    yes_count_q15 = Float.parseFloat("0");
+                    no_count_q15 = Float.parseFloat("0");
+                    na_count_q15 = Float.parseFloat("0");
                 }
 
                 try {
@@ -480,12 +619,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q16.setText(q16_count[0][0]);
                         count_no_q16.setText(q16_count[0][1]);
                         count_na_q16.setText(q16_count[0][2]);
+
+                        yes_count_q16 = Float.parseFloat(q16_count[0][0]);
+                        no_count_q16 = Float.parseFloat(q16_count[0][1]);
+                        na_count_q16 = Float.parseFloat(q16_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q16.setText("0");
                     count_no_q16.setText("0");
                     count_na_q16.setText("0");
+
+                    yes_count_q16 = Float.parseFloat("0");
+                    no_count_q16 = Float.parseFloat("0");
+                    na_count_q16 = Float.parseFloat("0");
                 }
 
                 try {
@@ -494,12 +641,20 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                         count_q17.setText(q17_count[0][0]);
                         count_no_q17.setText(q17_count[0][1]);
                         count_na_q17.setText(q17_count[0][2]);
+
+                        yes_count_q17 = Float.parseFloat(q17_count[0][0]);
+                        no_count_q17 = Float.parseFloat(q17_count[0][1]);
+                        na_count_q17 = Float.parseFloat(q17_count[0][2]);
                     }
                 } catch (Exception e) {
                     //Toast.makeText(ctx, ""+e, Toast.LENGTH_SHORT).show();
                     count_q17.setText("0");
                     count_no_q17.setText("0");
                     count_na_q17.setText("0");
+
+                    yes_count_q17 = Float.parseFloat("0");
+                    no_count_q17 = Float.parseFloat("0");
+                    na_count_q17 = Float.parseFloat("0");
                 }
 
             try {
@@ -522,6 +677,26 @@ public class Checklist_Validation_Button extends AppCompatActivity {
         catch (Exception e) {
                 ls.closeDB();
             }
+
+            total_count=yes_count_q1+yes_count_q2+yes_count_q3+yes_count_q4+yes_count_q5+yes_count_q6+yes_count_q7+yes_count_q8+yes_count_q9+
+                    yes_count_q10+yes_count_q11+yes_count_q12+yes_count_q13+yes_count_q14+yes_count_q15+yes_count_q16+yes_count_q17;
+        total_count_no=no_count_q1+no_count_q2+no_count_q3+no_count_q4+no_count_q5+no_count_q6+no_count_q7+no_count_q8+no_count_q9+no_count_q10+
+                no_count_q11+no_count_q12+no_count_q13+no_count_q14+no_count_q15+no_count_q16+no_count_q17;
+        total_count_na=na_count_q1+na_count_q2+na_count_q3+na_count_q4+na_count_q5+na_count_q6+na_count_q7+na_count_q8+na_count_q9+na_count_q10+
+                na_count_q11+na_count_q12+na_count_q13+na_count_q14+na_count_q15+na_count_q16+na_count_q17;
+
+        total_yes_count.setText(String.valueOf(total_count.intValue()));
+        total_no_count.setText(String.valueOf(total_count_no.intValue()));
+        total_na_count.setText(String.valueOf(total_count_na.intValue()));
+
+
+        per_yes=total_count/86*100;
+        per_no=total_count_no/86*100;
+        per_na=total_count_na/86*100;
+
+        per_yes_count.setText(String.valueOf(per_yes.intValue()));
+        per_no_count.setText(String.valueOf(per_no.intValue()));
+        per_na_count.setText(String.valueOf(per_na.intValue()));
 
             /*total_count = yes_count_mp + yes_count_im + yes_count_ka + yes_count_s + yes_count_vm + yes_count_r;
 
@@ -636,6 +811,13 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                 Log.d("000555", "error    " + error.getMessage());
                 //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
                 Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+
+                Lister ls = new Lister(ctx);
+                ls.createAndOpenDB();
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + activity_id + "' ";
+                ls.executeNonQuery(update_record);
             }
         }) {
             @Override
@@ -665,5 +847,66 @@ public class Checklist_Validation_Button extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
+
+    private void sendPostRequestLocal(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
+                                 final String metadata, final String status, final String added_by, final String added_on) {
+
+        String url = "https://localhostregister.000webhostapp.com/activityLHS.php";
+
+        Log.d("000555", "mURL " + url);
+        //  Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_LONG).show();
+
+        String REQUEST_TAG = "volleyStringRequest";
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("000555", "onResponse: "+response);
+                // Toast.makeText(ctx, response, Toast.LENGTH_SHORT).show();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("000555", "error    " + error.getMessage());
+                //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                Lister ls = new Lister(ctx);
+                ls.createAndOpenDB();
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + uid + "' ";
+                ls.executeNonQuery(update_record);
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("uid", uid);
+                params.put("health_facility", health_facility);
+                params.put("facility_id", facility_id);
+                params.put("user_id", user_id);
+                params.put("record_data", record_data);
+                params.put("status", status);
+                params.put("status_change", "1");
+                params.put("for_month", month);
+                params.put("for_year", year);
+                params.put("metadata", metadata);
+                params.put("added_by", added_by);
+                params.put("added_on", added_on);
+
+                Log.d("000555", "mParam " + params);
+
+                return params;
+            }
+
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
+    }
+
 
 }

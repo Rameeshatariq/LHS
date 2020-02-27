@@ -176,6 +176,7 @@ public class NewActivityAdd extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (sp_hc_hw.getSelectedItemPosition() == 0) {
                     // Toast.makeText(getApplicationContext(), "Please Select One", Toast.LENGTH_LONG).show();
+                    sp_health="";
                 } else if (sp_hc_hw.getSelectedItem().toString().equals("Health Worker")) {
                     rl_hw_list.setVisibility(View.VISIBLE);
                     tv_hw.setVisibility(View.VISIBLE);
@@ -296,7 +297,7 @@ public class NewActivityAdd extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("000555", "onClick: " + sp_health + " " + sp_facility + " " + sp_hw + "" + sp_hc + "" +s_date);
 
-                if (sp_facility_outreach.getSelectedItemPosition() == 0 && sp_hc_hw.getSelectedItemPosition() == 0 && sp_month.getSelectedItemPosition() == 0
+                if (sp_facility_outreach.getSelectedItemPosition() == 0 && sp_month.getSelectedItemPosition() == 0
                         && sp_year.getSelectedItemPosition() == 0) {
                     Toast.makeText(ctx, "Please Select One", Toast.LENGTH_SHORT).show();
                 }  else{
@@ -333,6 +334,7 @@ public class NewActivityAdd extends AppCompatActivity {
 
                     String health_facility= sp_hc+""+sp_hw;
                     sendPostRequest(activity_id, health_facility, "",user_id,month,year,s_date,String.valueOf(jobj),"0",added_by,added_on);
+                    sendPostRequestLocal(activity_id, health_facility, "",user_id,month,year,s_date,String.valueOf(jobj),"0",added_by,added_on);
 
                 }
             }
@@ -645,4 +647,60 @@ public class NewActivityAdd extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
+
+
+    private void sendPostRequestLocal(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
+                                 final String metadata, final String status, final String added_by, final String added_on) {
+
+        String url = "https://localhostregister.000webhostapp.com/activityLHS.php";
+
+        Log.d("000555", "mURL " + url);
+        //  Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_LONG).show();
+
+        String REQUEST_TAG = "volleyStringRequest";
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("000555", "onResponse: "+response);
+                // Toast.makeText(ctx, response, Toast.LENGTH_SHORT).show();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("000555", "error    " + error.getMessage());
+                //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("uid", uid);
+                params.put("health_facility", health_facility);
+                params.put("facility_id", facility_id);
+                params.put("user_id", user_id);
+                params.put("record_data", record_data);
+                params.put("status", status);
+                params.put("status_change", "0");
+                params.put("for_month", month);
+                params.put("for_year", year);
+                params.put("metadata", metadata);
+                params.put("added_by", added_by);
+                params.put("added_on", added_on);
+
+                Log.d("000555", "mParam " + params);
+
+                return params;
+            }
+
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
+    }
+
 }

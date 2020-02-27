@@ -385,6 +385,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -396,6 +397,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData1[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData1[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData1[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -407,11 +409,14 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData2[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData2[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData2[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
                 sendPostRequest(activity_id, 3, Double.valueOf("3.9"), mData2[0][9], String.valueOf(jobj), added_by, added_on);
+                sendPostRequestQuestion(activity_id, 3, Double.valueOf("3.9"), mData2[0][9], String.valueOf(jobj), added_by, added_on);
                 sendPostRequest1(activity_id, 3, "3.10", mData2[0][10], String.valueOf(jobj), added_by, added_on);
+                sendPostRequestQuestion1(activity_id, 3, "3.10", mData2[0][10], String.valueOf(jobj), added_by, added_on);
 
                 s = 1;
 
@@ -421,6 +426,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData3[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData3[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData3[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -431,6 +437,7 @@ public class Sync_Activity extends AppCompatActivity {
                     DecimalFormat format = new DecimalFormat("#.#");
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData4[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData4[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData4[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -442,6 +449,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData5[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData5[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData5[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -452,6 +460,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData6[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData6[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData6[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -462,6 +471,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData7[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData7[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData7[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -472,6 +482,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData8[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData8[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData8[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -482,6 +493,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData9[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData9[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData9[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -492,6 +504,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData10[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData10[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData10[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -502,6 +515,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData11[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData11[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData11[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -512,6 +526,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData12[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData12[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData12[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -522,6 +537,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData13[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData13[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData13[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -532,6 +548,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData14[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData14[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData14[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -542,6 +559,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData15[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData15[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData15[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -552,6 +570,7 @@ public class Sync_Activity extends AppCompatActivity {
                     Double.valueOf(format.format(i));
                     Log.d("000999", "getPatientTool2: [type]=" + type + " [question]=" + Double.valueOf(format.format(i)) + " [value]=" + mData16[0][s]);
                     sendPostRequest(activity_id, type, Double.valueOf(format.format(i)), mData16[0][s], String.valueOf(jobj), added_by, added_on);
+                    sendPostRequestQuestion(activity_id, type, Double.valueOf(format.format(i)), mData16[0][s], String.valueOf(jobj), added_by, added_on);
                     s++;
                 }
 
@@ -579,6 +598,8 @@ public class Sync_Activity extends AppCompatActivity {
 
                 alertDialog.dismiss();
                 sendPostRequestActivity(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
+                        activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
+                sendPostRequestActivityLocal(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
                         activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
             }
         }
@@ -719,6 +740,60 @@ public class Sync_Activity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
 
+    private void sendPostRequestQuestion(final String activity_id, final Integer type, final Double question, final String value,
+                                 final String metadata, final String added_by, final String added_on) {
+
+        String url = "https://localhostregister.000webhostapp.com/LHS_question_save.php";
+
+        Log.d("000555", "mURL " + url);
+        //  Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_LONG).show();
+
+        String REQUEST_TAG = "volleyStringRequest";
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("000555", "onResponse: ");
+                // Toast.makeText(ctx, response, Toast.LENGTH_SHORT).show();
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("000555", "error    " + error.getMessage());
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced_checklist='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + activity_id + "' ";
+                ls.executeNonQuery(update_record);
+                //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(ctx, "ڈیٹا سینک نہیں ہوا", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("activity_id", activity_id);
+                params.put("type", type.toString());
+                params.put("question", question.toString());
+                params.put("value", value);
+                params.put("metadata", metadata);
+                params.put("added_by", added_by);
+                params.put("added_on", added_on);
+
+                Log.d("000555", "mParam " + params);
+
+                return params;
+            }
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
+    }
+
+
     private void sendPostRequest1(final String activity_id, final Integer type, final String question, final String value,
                                   final String metadata, final String added_by, final String added_on) {
 
@@ -805,6 +880,58 @@ public class Sync_Activity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
 
+    private void sendPostRequestQuestion1(final String activity_id, final Integer type, final String question, final String value,
+                                  final String metadata, final String added_by, final String added_on) {
+
+        String url = "https://localhostregister.000webhostapp.com/LHS_question_save.php";
+
+        Log.d("000555", "mURL " + url);
+        //  Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_LONG).show();
+
+        String REQUEST_TAG = "volleyStringRequest";
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("000555", "onResponse: "+response);
+                // Toast.makeText(ctx, response, Toast.LENGTH_SHORT).show();
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("000555", "error    " + error.getMessage());
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced_checklist='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + activity_id + "' ";
+                ls.executeNonQuery(update_record);
+                //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ctx, "ڈیٹا سینک نہیں ہوا", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("activity_id", activity_id);
+                params.put("type", type.toString());
+                params.put("question", question);
+                params.put("value", value);
+                params.put("metadata", metadata);
+                params.put("added_by", added_by);
+                params.put("added_on", added_on);
+
+                Log.d("000555", "mParam " + params);
+
+                return params;
+            }
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
+    }
 
     private void sendPostRequestActivity(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
                                  final String metadata, final String status, final String added_by, final String added_on) {
@@ -865,6 +992,11 @@ public class Sync_Activity extends AppCompatActivity {
                 Log.d("000555", "error    " + error.getMessage());
                 //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
                 Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                Log.d("000555", "error    " + error.getMessage());
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced_checklist='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + uid + "' ";
+                ls.executeNonQuery(update_record);
             }
         }) {
             @Override
@@ -878,7 +1010,66 @@ public class Sync_Activity extends AppCompatActivity {
                 params.put("user_id", user_id);
                 params.put("record_data", record_data);
                 params.put("status", status);
-                params.put("status_change", "1");
+                params.put("status_change", "0");
+                params.put("for_month", month);
+                params.put("for_year", year);
+                params.put("metadata", metadata);
+                params.put("added_by", added_by);
+                params.put("added_on", added_on);
+
+                Log.d("000555", "mParam " + params);
+
+                return params;
+            }
+
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
+    }
+
+    private void sendPostRequestActivityLocal(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
+                                         final String metadata, final String status, final String added_by, final String added_on) {
+
+        String url = "https://localhostregister.000webhostapp.com/activityLHS.php";
+
+        Log.d("000555", "mURL " + url);
+        //  Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_LONG).show();
+
+        String REQUEST_TAG = "volleyStringRequest";
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("000555", "onResponse: ");
+                // Toast.makeText(ctx, response, Toast.LENGTH_SHORT).show();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("000555", "error    " + error.getMessage());
+                //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                Log.d("000555", "error    " + error.getMessage());
+                String update_record = "UPDATE Activities SET " +
+                        "is_synced_checklist='" + String.valueOf(0) + "' " +
+                        "WHERE activity_id = '" + uid + "' ";
+                ls.executeNonQuery(update_record);
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("uid", uid);
+                params.put("health_facility", health_facility);
+                params.put("facility_id", facility_id);
+                params.put("user_id", user_id);
+                params.put("record_data", record_data);
+                params.put("status", status);
+                params.put("status_change", "0");
                 params.put("for_month", month);
                 params.put("for_year", year);
                 params.put("metadata", metadata);

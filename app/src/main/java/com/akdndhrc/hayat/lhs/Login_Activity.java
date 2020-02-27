@@ -182,6 +182,28 @@ public class Login_Activity extends AppCompatActivity {
                             sendPostRequest(et_username.getText().toString(), et_password.getText().toString());
                         } else {
 
+                          //  checkLoginCreden(et_username.getText().toString(), et_password.getText().toString());
+
+
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    try {
+                                        checkLoginCreden(et_username.getText().toString(), et_password.getText().toString());
+
+                                    } catch (Exception e) {
+                                        alertDialog.dismiss();
+                                        Log.d("000862", "Er" + e.getMessage());
+                                    } finally {
+
+                                        alertDialog.dismiss();
+                                    }
+                                }
+
+                            }, 4000);
+
                             Log.d("000862", "NO INTERNET OFFLINE LOGIN");
                         }
 
@@ -385,7 +407,7 @@ public class Login_Activity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                         Log.d("000862", "Catch: " + e.getMessage());
-                        Toast.makeText(getApplicationContext(), "No data found for " + "vacnines " + String.valueOf(e.getMessage()), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(getApplicationContext(), "No data found for " + "vacnines " + String.valueOf(e.getMessage()), Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -419,7 +441,7 @@ public class Login_Activity extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                         Log.d("000862", "Catch: " + e.getMessage());
-                        Toast.makeText(getApplicationContext(), "No data found for " + "facilities " + String.valueOf(e.getMessage()), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(getApplicationContext(), "No data found for " + "facilities " + String.valueOf(e.getMessage()), Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (Exception e) {

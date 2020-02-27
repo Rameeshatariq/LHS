@@ -181,6 +181,8 @@ public class Activities_Adapter extends BaseAdapter {
         if(holder.activities_lv_status.getText().toString().equals("1")){
             holder.activities_lv_status.setVisibility(View.VISIBLE);
             holder.activities_lv_status.setText("Completed");
+            holder.execute.setBackgroundColor(ctx.getResources().getColor(R.color.chtr_dpt_green_txt_color));
+
         }
 
 

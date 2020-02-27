@@ -387,13 +387,14 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_140sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
+                    android:layout_gravity="right"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 1"
+                    android:text="@string/q1"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -445,13 +446,12 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
-                    android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 2"
+                    android:text="@string/q2"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -503,13 +503,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 3"
+                    android:text="@string/q3"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -563,13 +563,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 4"
+                    android:text="@string/q4"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -622,13 +622,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 5"
+                    android:text="@string/q5"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -681,13 +681,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 6"
+                    android:text="@string/q6"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -741,13 +741,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 7"
+                    android:text="@string/q7"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -800,13 +800,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 8"
+                    android:text="@string/q8"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -859,13 +859,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 9"
+                    android:text="@string/q9"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -918,13 +918,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 10"
+                    android:text="@string/q10"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -977,13 +977,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 11"
+                    android:text="@string/q11"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1036,13 +1036,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 12"
+                    android:text="@string/q12"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1095,13 +1095,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 13"
+                    android:text="@string/q13"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1154,13 +1154,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 14"
+                    android:text="@string/q14"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1213,13 +1213,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 15"
+                    android:text="@string/q15"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1272,13 +1272,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 16"
+                    android:text="@string/q16"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1331,13 +1331,13 @@
                 android:paddingTop="@dimen/_5sdp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:fontFamily="@font/raleway_medium"
                     android:paddingStart="@dimen/_6sdp"
-                    android:text="Question 17"
+                    android:text="@string/q17"
                     android:textColor="@color/dark_blue_color"
                     android:textSize="@dimen/_11sdp"
                     android:textStyle="bold" />
@@ -1383,6 +1383,122 @@
 
             </TableRow>
 
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:text="Total"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_yes_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tv_total_no_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tv_total_na_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:maxLength="6"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_margin="1dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:text="Percentage %"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_per_yes_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tv_per_no_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tv_per_na_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:maxLength="6"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_11sdp" />
+
+            </TableRow>
 
         </TableLayout>
 

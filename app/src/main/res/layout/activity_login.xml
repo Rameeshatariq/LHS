@@ -191,7 +191,7 @@
                 android:layout_below="@+id/rl_sync"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/raleway_medium"
-                android:text="Version: 4.0.3"
+                android:text="Version: 4.0.4"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/_12sdp" />
 
