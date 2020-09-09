@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -467,7 +468,7 @@ public class Activities_Adapter extends BaseAdapter {
 
                         for(int i=0; i<jsonArray.length(); i++) {
 
-                            String query_form_get_data = "insert into total_preg (member_id, full_name, added_by, month,year)" +
+                            String query_form_get_data = "insert or ignore into total_preg (member_id, full_name, added_by, month,year)" +
                                     " values " +
                                     "(" +
                                     "'" + jsonArray.getJSONObject(i).getString("member_id") + "'," +
@@ -491,13 +492,13 @@ public class Activities_Adapter extends BaseAdapter {
                             Toast.makeText(ctx, "Data downloaded successfully", Toast.LENGTH_LONG).show();
 
                         }
-                        else{
+                        /*else{
                             alertDialog.dismiss();
                             holder.execute.setText("Execute");
                             holder.iv_refresh.setVisibility(View.VISIBLE);
-                            Toast.makeText(ctx, "Total Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                            Toast.makeText(ctx, "Total pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
-                        }
+                        }*/
                         //   progressDialog.dismiss();
                     } catch (Exception e) {
                         //   progressDialog.dismiss();
@@ -505,7 +506,7 @@ public class Activities_Adapter extends BaseAdapter {
                         Log.d("000222", "Err:    " + e.getMessage());
                         holder.execute.setText("Execute");
                         holder.iv_refresh.setVisibility(View.VISIBLE);
-                        Toast.makeText(ctx, "Total Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "Total pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
@@ -514,7 +515,7 @@ public class Activities_Adapter extends BaseAdapter {
                     Log.d("000222", "Err:    " + e.getMessage());
                     holder.execute.setText("Execute");
                     holder.iv_refresh.setVisibility(View.VISIBLE);
-                    Toast.makeText(ctx, "Total Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctx, "Total pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
                 }
                 holder.execute.setText("Execute");
@@ -531,7 +532,7 @@ public class Activities_Adapter extends BaseAdapter {
                 alertDialog.dismiss();
                 holder.execute.setText("Execute");
                 holder.iv_refresh.setVisibility(View.VISIBLE);
-                Toast.makeText(ctx, "Total Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Total pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
             }
         }) {
             @Override
@@ -550,6 +551,13 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }
@@ -598,7 +606,7 @@ public class Activities_Adapter extends BaseAdapter {
 
                         for(int i=0; i<jsonArray.length(); i++) {
 
-                            String query_form_get_data = "insert into live_birth (member_id, full_name, added_by, month,year)" +
+                            String query_form_get_data = "insert or ignore into live_birth (member_id, full_name, added_by, month,year)" +
                                     " values " +
                                     "(" +
                                     "'" + jsonArray.getJSONObject(i).getString("member_id") + "'," +
@@ -618,13 +626,13 @@ public class Activities_Adapter extends BaseAdapter {
                         //   progressDialog.dismiss();
                         e.printStackTrace();
                         Log.d("000222", "Catch: " + e.getMessage());
-                        Toast.makeText(ctx, "Live Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "Live birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
                     //  progressDialog.dismiss();
                     Log.d("000222", "Err:    " + e.getMessage());
-                    Toast.makeText(ctx, "Live Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctx, "Live birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
                 }
 
@@ -635,7 +643,7 @@ public class Activities_Adapter extends BaseAdapter {
             public void onErrorResponse(VolleyError error) {
                 //progressDialog.dismiss();
                 Log.d("000222", "error    " + error.getMessage());
-                Toast.makeText(ctx, "Live Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Live birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                 //  Toast.makeText(Login_Activity.this, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
 
 
@@ -657,6 +665,11 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }
@@ -704,7 +717,7 @@ public class Activities_Adapter extends BaseAdapter {
                         boolean m2 = ls.executeNonQuery(Helper.CREATE_TABLE_LOW_BIRTH);
                         for(int i=0; i<jsonArray.length(); i++) {
 
-                            String query_form_get_data = "insert into low_birth (member_id, full_name, added_by, month,year)" +
+                            String query_form_get_data = "insert or ignore into low_birth (member_id, full_name, added_by, month,year)" +
                                     " values " +
                                     "(" +
                                     "'" + jsonArray.getJSONObject(i).getString("member_id") + "'," +
@@ -723,13 +736,13 @@ public class Activities_Adapter extends BaseAdapter {
                         //   progressDialog.dismiss();
                         e.printStackTrace();
                         Log.d("000222", "Catch: " + e.getMessage());
-                        Toast.makeText(ctx, "Low Weight Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "Low weight birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
                     //  progressDialog.dismiss();
                     Log.d("000222", "Err:    " + e.getMessage());
-                    Toast.makeText(ctx, "Low Weight Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctx, "Low weight birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
                 }
 
@@ -740,7 +753,7 @@ public class Activities_Adapter extends BaseAdapter {
             public void onErrorResponse(VolleyError error) {
                 //progressDialog.dismiss();
                 Log.d("000222", "error    " + error.getMessage());
-                Toast.makeText(ctx, "Low Weight Birth data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Low weight birth data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                 //  Toast.makeText(Login_Activity.this, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
 
 
@@ -762,6 +775,12 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }
@@ -810,7 +829,7 @@ public class Activities_Adapter extends BaseAdapter {
 
                         for(int i=0; i<jsonArray.length(); i++) {
 
-                            String query_form_get_data = "insert into new_preg (member_id, full_name, added_by, month,year)" +
+                            String query_form_get_data = "insert or ignore into new_preg (member_id, full_name, added_by, month,year)" +
                                     " values " +
                                     "(" +
                                     "'" + jsonArray.getJSONObject(i).getString("member_id") + "'," +
@@ -829,13 +848,13 @@ public class Activities_Adapter extends BaseAdapter {
                         //   progressDialog.dismiss();
                         e.printStackTrace();
                         Log.d("000222", "Catch: " + e.getMessage());
-                        Toast.makeText(ctx, "New Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "New pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
                     //  progressDialog.dismiss();
                     Log.d("000222", "Err:    " + e.getMessage());
-                    Toast.makeText(ctx, "New Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctx, "New pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
                 }
 
@@ -846,7 +865,7 @@ public class Activities_Adapter extends BaseAdapter {
             public void onErrorResponse(VolleyError error) {
                 //progressDialog.dismiss();
                 Log.d("000222", "error    " + error.getMessage());
-                Toast.makeText(ctx, "New Pregnant Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "New pregnant women data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                 //  Toast.makeText(Login_Activity.this, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
 
 
@@ -868,6 +887,12 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }
@@ -917,7 +942,7 @@ public class Activities_Adapter extends BaseAdapter {
 
                         for(int i=0; i<jsonArray.length(); i++) {
 
-                            String query_form_get_data = "insert into high_risk (member_id, full_name, added_by, month,year)" +
+                            String query_form_get_data = "insert or ignore into high_risk (member_id, full_name, added_by, month,year)" +
                                     " values " +
                                     "(" +
                                     "'" + jsonArray.getJSONObject(i).getString("member_id") + "'," +
@@ -936,13 +961,13 @@ public class Activities_Adapter extends BaseAdapter {
                         //   progressDialog.dismiss();
                         e.printStackTrace();
                         Log.d("000222", "Catch: " + e.getMessage());
-                        Toast.makeText(ctx, "High Risk data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "High risk data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
                     //  progressDialog.dismiss();
                     Log.d("000222", "Err:    " + e.getMessage());
-                    Toast.makeText(ctx, "High Risk Women data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctx, "High risk data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
 
                 }
 
@@ -953,7 +978,7 @@ public class Activities_Adapter extends BaseAdapter {
             public void onErrorResponse(VolleyError error) {
                 //progressDialog.dismiss();
                 Log.d("000222", "error    " + error.getMessage());
-                Toast.makeText(ctx, "High Risk data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "High risk data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                 //  Toast.makeText(Login_Activity.this, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
 
 
@@ -975,6 +1000,12 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }
@@ -1101,7 +1132,7 @@ public class Activities_Adapter extends BaseAdapter {
 
                         String added_on = String.valueOf(System.currentTimeMillis());
 
-                        String query_form_get_data = "insert into MONTHLY_REPORT (month, year, health_commettees,women_suport_group,household_registered_lhw, " +
+                        String query_form_get_data = "insert or ignore into MONTHLY_REPORT (month, year, health_commettees,women_suport_group,household_registered_lhw, " +
                                 " tap, spring, handpump, well, other,flush_system," +
                                 " age_1223_count, age_1223_fully_imunized, age_lt3_count, age_lt3_gm, age_lt3_malnurished, new_borns_1week," +
                                 " low_birth_weight, breast_fed, immunized,new_preg,total_preg,total_vistis,iron_sup,abortions,delivey_4p,delivery_pnc," +
@@ -1238,7 +1269,7 @@ public class Activities_Adapter extends BaseAdapter {
                         //   progressDialog.dismiss();
                         e.printStackTrace();
                         Log.d("000222", "Catch: " + e.getMessage());
-                        Toast.makeText(ctx, "Count data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ctx, "Count data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
@@ -1255,7 +1286,7 @@ public class Activities_Adapter extends BaseAdapter {
             public void onErrorResponse(VolleyError error) {
                 //progressDialog.dismiss();
                 Log.d("000222", "error    " + error.getMessage());
-                Toast.makeText(ctx, "Count data not downloaded successfully, Please use Manual Option", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Count data not downloaded successfully, Please use manual option", Toast.LENGTH_LONG).show();
                 //  Toast.makeText(Login_Activity.this, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
 
 
@@ -1276,6 +1307,12 @@ public class Activities_Adapter extends BaseAdapter {
                 return params;
             }
         };
+
+
+        strReq1.setRetryPolicy(new DefaultRetryPolicy(
+                30000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         AppController.getInstance().addToRequestQueue(strReq1, REQUEST_TAG);
     }

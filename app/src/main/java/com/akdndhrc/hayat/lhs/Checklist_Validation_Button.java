@@ -230,14 +230,23 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                 if(isInserted == true){
                     status.setChecked(true);
                     comp.setText("Completed");
+                    comp.setVisibility(View.GONE);
 
                     String[][] activityData= ls.executeReader("Select * from Activities where activity_id = '"+activity_id+"' ");
 
                     sendPostRequest(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
                             activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
 
+                    Intent intent = new Intent(Checklist_Validation_Button.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
+/*
+
                     sendPostRequestLocal(activityData[0][0], activityData[0][4], "",activityData[0][5],activityData[0][8],activityData[0][9],
                             activityData[0][1],String.valueOf(jobj),activityData[0][10],added_by,added_on);
+*/
 
                 }
             }
@@ -662,6 +671,7 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                 Log.d("00055", "onResume: "+mstatus[0][0]);
                 if(!mstatus[0][0].equals("0")){
                     status.setChecked(true);
+                    comp.setVisibility(View.GONE);
                 }
                 else{
                     status.setChecked(false);
@@ -786,17 +796,17 @@ public class Checklist_Validation_Button extends AppCompatActivity {
                                 "is_synced='" + String.valueOf(1) + "' " +
                                 "WHERE activity_id = '" + activity_id + "' ";
                         ls.executeNonQuery(update_record);
-                        Toast.makeText(ctx, "Data Synced Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Data synced successfully", Toast.LENGTH_SHORT).show();
                     } else {
                         Log.d("000555", "else ");
-                        Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                         //Toast.makeText(ctx, "Data has not been sent to the service.", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (Exception e) {
                     Log.d("000555", " Error: " + e.getMessage());
                     //Toast.makeText(ctx, "Data has been sent incorrectly.", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                     String update_record = "UPDATE Activities SET " +
                             "is_synced='" + String.valueOf(0) + "' " +
                             "WHERE activity_id = '" + activity_id + "' ";
@@ -810,7 +820,7 @@ public class Checklist_Validation_Button extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.d("000555", "error    " + error.getMessage());
                 //    Toast.makeText(ctx, "برائے مہربانی انٹرنیٹ کنکشن چیک کریں", Toast.LENGTH_SHORT).show();
-                Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
 
                 Lister ls = new Lister(ctx);
                 ls.createAndOpenDB();
@@ -847,6 +857,7 @@ public class Checklist_Validation_Button extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
+/*
 
     private void sendPostRequestLocal(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
                                  final String metadata, final String status, final String added_by, final String added_on) {
@@ -907,6 +918,7 @@ public class Checklist_Validation_Button extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
+*/
 
 
 }

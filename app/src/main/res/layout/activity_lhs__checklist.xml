@@ -127,7 +127,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -194,7 +194,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -260,7 +260,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -326,7 +326,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -392,7 +392,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -461,7 +461,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -527,7 +527,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -593,7 +593,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -659,7 +659,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -725,7 +725,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -794,7 +794,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -860,7 +860,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -926,7 +926,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -992,7 +992,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -1058,7 +1058,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -1124,7 +1124,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView
@@ -1190,7 +1190,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:text="N/A"
                             android:textStyle="bold"
-                            android:textColor="@color/graph_red_color"
+                            android:textColor="@color/black"
                             android:layout_width="30dp"
                             android:layout_height="20dp" />
                         <TextView

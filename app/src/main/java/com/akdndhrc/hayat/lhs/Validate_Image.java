@@ -691,16 +691,16 @@ public class Validate_Image extends AppCompatActivity {
 
                                 }
 
-                                Toast.makeText(ctx, "Data Synced Successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ctx, "Data synced successfully", Toast.LENGTH_SHORT).show();
                             } else {
                                 Log.d("000555", "else ");
-                                Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                                 //Toast.makeText(ctx, "Data has not been sent to the service.", Toast.LENGTH_SHORT).show();
                             }
                         }
                         catch (Exception e){
                             Log.d("000555", "Error: "+e);
-                            Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -708,7 +708,7 @@ public class Validate_Image extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.d("000555", "Error: "+error);
-                        Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                     }
                 }) {
 

@@ -136,7 +136,7 @@
                         android:layout_marginLeft="@dimen/_8sdp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/raleway_medium"
-                        android:text="Select Health Centre/Health Worker:"
+                        android:text="Select health centre/health worker"
                         android:textColor="@color/dark_blue_color"
                         android:textSize="@dimen/_12sdp" />
 
@@ -212,7 +212,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/raleway_medium"
-                        android:text="Loading Data.."
+                        android:text="Loading data.."
                         android:textColor="@color/dark_blue_color"
                         android:textSize="@dimen/_14sdp" />
 

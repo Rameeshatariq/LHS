@@ -299,7 +299,7 @@ public class NewActivityAdd extends AppCompatActivity {
 
                 if (sp_facility_outreach.getSelectedItemPosition() == 0 && sp_month.getSelectedItemPosition() == 0
                         && sp_year.getSelectedItemPosition() == 0) {
-                    Toast.makeText(ctx, "Please Select One", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ctx, "Please select one", Toast.LENGTH_SHORT).show();
                 }  else{
                     Helper helper = new Helper(ctx);
                     String totalcount = "0.0";
@@ -334,7 +334,7 @@ public class NewActivityAdd extends AppCompatActivity {
 
                     String health_facility= sp_hc+""+sp_hw;
                     sendPostRequest(activity_id, health_facility, "",user_id,month,year,s_date,String.valueOf(jobj),"0",added_by,added_on);
-                    sendPostRequestLocal(activity_id, health_facility, "",user_id,month,year,s_date,String.valueOf(jobj),"0",added_by,added_on);
+                   // sendPostRequestLocal(activity_id, health_facility, "",user_id,month,year,s_date,String.valueOf(jobj),"0",added_by,added_on);
 
                 }
             }
@@ -597,10 +597,10 @@ public class NewActivityAdd extends AppCompatActivity {
                                 "is_synced='" + String.valueOf(1) + "' " +
                                 "WHERE activity_id = '" + activity_id + "' ";
                         ls.executeNonQuery(update_record);
-                        Toast.makeText(ctx, "Data Synced Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Data synced successfully", Toast.LENGTH_SHORT).show();
                     } else {
                         Log.d("000555", "else ");
-                        Toast.makeText(ctx, "Data not Synced Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Data not synced successfully", Toast.LENGTH_SHORT).show();
                         //Toast.makeText(ctx, "Data has not been sent to the service.", Toast.LENGTH_SHORT).show();
                     }
 
@@ -648,6 +648,7 @@ public class NewActivityAdd extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
 
+/*
 
     private void sendPostRequestLocal(final String uid, final String health_facility, final String facility_id, final String user_id, final String month, final String year, final String record_data,
                                  final String metadata, final String status, final String added_by, final String added_on) {
@@ -702,5 +703,6 @@ public class NewActivityAdd extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(strReq, REQUEST_TAG);
     }
+*/
 
 }

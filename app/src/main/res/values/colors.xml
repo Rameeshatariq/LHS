@@ -91,4 +91,7 @@
     <color name="graph_green_color">#469519</color>
     <color name="graph_red_color">#e03030</color>
     <color name="graph_orange_color">#FFC107</color>
+
+    <color name="black">#000</color>
+
 </resources>

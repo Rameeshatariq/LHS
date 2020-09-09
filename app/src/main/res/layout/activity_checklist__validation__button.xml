@@ -213,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="Monthly Report"
+                android:text="Monthly report"
                 android:textColor="#fff"
                 android:textSize="@dimen/_18sdp" />
 

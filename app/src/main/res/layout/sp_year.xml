@@ -9,4 +9,4 @@
     android:textDirection="anyRtl"
     android:gravity="left"
     android:textColor="@color/dark_blue_color"
-    android:text="Select Year"/>
+    android:text="Select year"/>

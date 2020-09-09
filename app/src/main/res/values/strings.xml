@@ -133,9 +133,9 @@
     <string name="q17.2">2. کیا رجسٹرز ، ڈائری ، ما ں اور بچے کی صحت کا کارڈ اور کمیو نٹی چا رٹ صحیح طریقے سے بھرتی ہے؟</string>
     <string name="q17.3">3. کیا پچھلی ما ہا نہ رپورٹ مر کز صحت میں جمع کرادی ہے؟</string>
 
-    <string name="planning_spinner_hc_hw">Select Health Centre/ Health Worker</string>
-    <string name="planning_spinner_hc_list">Select Health Centre</string>
-    <string name="planning_spinner_hw_list">Select Health Worker</string>
-    <string name="planning_spinner_facility_outreach">Select Facility</string>
+    <string name="planning_spinner_hc_hw">Select health centre/health worker</string>
+    <string name="planning_spinner_hc_list">Select health centre</string>
+    <string name="planning_spinner_hw_list">Select health worker</string>
+    <string name="planning_spinner_facility_outreach">Select facility</string>
 
 </resources>

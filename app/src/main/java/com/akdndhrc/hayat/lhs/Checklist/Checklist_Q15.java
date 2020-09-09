@@ -173,7 +173,7 @@ public class Checklist_Q15 extends AppCompatActivity {
                                 "question15_na_count = '" + na_count + "' " +
                                 " where activity_id  = '" + activity_id + "'");
                         if (isInserted == true) {
-                            Toast.makeText(ctx, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data updated successfully", Toast.LENGTH_SHORT).show();
                             count = 0;
                             no_count =0;
                             na_count =0;
@@ -184,14 +184,14 @@ public class Checklist_Q15 extends AppCompatActivity {
                             ls.executeNonQuery(update_record);
                             Log.d("00055", "Update: "+activity_id+" "+result_q1+" "+result_q2+" "+result_q3+" "+result_q4+" "+count);
                         } else {
-                            Toast.makeText(ctx, "Data Not Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data not updated successfully", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
 
                         isInserted = helper.question15(activity_id, result_q1, result_q2, result_q3, count,no_count,na_count);
                         if(isInserted){
-                            Toast.makeText(ctx, "Data Added Successfully", Toast.LENGTH_SHORT).show();}
+                            Toast.makeText(ctx, "Data added successfully", Toast.LENGTH_SHORT).show();}
                         count = 0;
                         no_count =0;
                         na_count =0;
@@ -235,7 +235,7 @@ public class Checklist_Q15 extends AppCompatActivity {
                                 "question15_na_count = '" + na_count + "' " +
                                 " where activity_id  = '" + activity_id + "'");
                         if (isInserted == true) {
-                            Toast.makeText(ctx, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data updated successfully", Toast.LENGTH_SHORT).show();
                             Log.d("00055", "Update: "+activity_id+" "+result_q1+" "+result_q2+" "+result_q3+" "+result_q4+" "+count);
                             count = 0;
                             no_count =0;
@@ -246,14 +246,14 @@ public class Checklist_Q15 extends AppCompatActivity {
                                     "WHERE activity_id = '" + activity_id + "' ";
                             ls.executeNonQuery(update_record);
                         } else {
-                            Toast.makeText(ctx, "Data Not Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data not updated successfully", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
 
                         isInserted = helper.question15(activity_id, result_q1, result_q2, result_q3, count,no_count,na_count);
                         if(isInserted){
-                            Toast.makeText(ctx, "Data Added Successfully", Toast.LENGTH_SHORT).show();}
+                            Toast.makeText(ctx, "Data added successfully", Toast.LENGTH_SHORT).show();}
                         Log.d("00055", "Add: "+activity_id+" "+result_q1+" "+result_q2+" "+result_q3+" "+result_q4+" "+count);
                         count = 0;
                         no_count =0;

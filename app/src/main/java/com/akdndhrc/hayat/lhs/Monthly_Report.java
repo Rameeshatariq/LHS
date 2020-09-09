@@ -229,21 +229,21 @@ public class Monthly_Report extends AppCompatActivity {
             public void onClick(View view) {
                 prepare();
 
-             //   Log.d("000888", "type: "+type);
+                Log.d("000888", "type: "+type);
 
-                if(type.equals("Live Birth")){
+                if(type.equals("Live birth")){
                     insertdb_lifebirth();
                 }
-                else if(type.equals("Low Birth")){
+                else if(type.equals("Low birth")){
                     insertdb_lowbirth();
                 }
-                else if(type.equals("Total Pregnant")){
+                else if(type.equals("Total pregnant")){
                     insertdb_totalpreg();
                 }
-                else if(type.equals("New Pregnant")){
+                else if(type.equals("New pregnant")){
                     insertdb_newpreg();
                 }
-                else if(type.equals("High Risk")){
+                else if(type.equals("High risk")){
                     insertdb_highrisk();
                 }
 
@@ -271,7 +271,7 @@ public class Monthly_Report extends AppCompatActivity {
         Log.d("000555","Query: "+res);
 
         if(res){
-            Toast.makeText(ctx, "Manual Data added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data added to database", Toast.LENGTH_SHORT).show();
 
             dialog.dismiss();
 
@@ -282,7 +282,7 @@ public class Monthly_Report extends AppCompatActivity {
 
         }
         else{
-            Toast.makeText(ctx, "Manual Data not added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data not added to database", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -306,7 +306,7 @@ public class Monthly_Report extends AppCompatActivity {
         Log.d("000555","Query: "+res);
 
         if(res){
-            Toast.makeText(ctx, "Manual Data added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data added to database", Toast.LENGTH_SHORT).show();
 
             dialog.dismiss();
 
@@ -317,7 +317,7 @@ public class Monthly_Report extends AppCompatActivity {
 
         }
         else{
-            Toast.makeText(ctx, "Manual Data not added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data not added to database", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -342,7 +342,7 @@ public class Monthly_Report extends AppCompatActivity {
         Log.d("000555","Query: "+res);
 
         if(res){
-            Toast.makeText(ctx, "Manual Data added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data added to database", Toast.LENGTH_SHORT).show();
 
             dialog.dismiss();
 
@@ -353,7 +353,7 @@ public class Monthly_Report extends AppCompatActivity {
 
         }
         else{
-            Toast.makeText(ctx, "Manual Data not added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data not added to database", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -378,7 +378,7 @@ public class Monthly_Report extends AppCompatActivity {
         Log.d("000555","Query: "+res);
 
         if(res){
-            Toast.makeText(ctx, "Manual Data added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data added to database", Toast.LENGTH_SHORT).show();
 
             dialog.dismiss();
 
@@ -389,7 +389,7 @@ public class Monthly_Report extends AppCompatActivity {
 
         }
         else{
-            Toast.makeText(ctx, "Manual Data not added to database", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Manual data not added to database", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -434,11 +434,11 @@ public class Monthly_Report extends AppCompatActivity {
     private void prepare(){
 
         if(type.equals("0")){
-            Toast.makeText(ctx, "Please Select One Type", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please select one type", Toast.LENGTH_SHORT).show();
             return;
         }
         if(et_dob.getText().toString().isEmpty()){
-            Toast.makeText(ctx, "Please Enter Date of Birth", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please enter date of birth", Toast.LENGTH_SHORT).show();
             return;
         }
         else{
@@ -453,21 +453,21 @@ public class Monthly_Report extends AppCompatActivity {
 
         }
         if(et_vacinated_on.getText().toString().isEmpty()){
-            Toast.makeText(ctx, "Please Enter Vaccination Date", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please enter vaccination date", Toast.LENGTH_SHORT).show();
             return;
         }
         else{
             vacinated_on=et_vacinated_on.getText().toString();
         }
         if(et_child_name.getText().toString().isEmpty()){
-            Toast.makeText(ctx, "Please Enter Child Name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please enter child name", Toast.LENGTH_SHORT).show();
             return;
         }
         else{
             child_name=et_child_name.getText().toString();
         }
         if(et_father_name.getText().toString().isEmpty()){
-            Toast.makeText(ctx, "Please Enter Father Name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please enter father name", Toast.LENGTH_SHORT).show();
             return;
         }
         else{
@@ -533,11 +533,11 @@ public class Monthly_Report extends AppCompatActivity {
 
 
         // Adding header data
-        listDataHeader.add("Low Birth Weight Babies");
-        listDataHeader.add("Newly Registered Pregnant Women");
-        listDataHeader.add("Total Pregnant Women");
-        listDataHeader.add("Live Births");
-        listDataHeader.add("High Risk");
+        listDataHeader.add("Low birth weight babies");
+        listDataHeader.add("Newly registered pregnant women");
+        listDataHeader.add("Total pregnant women");
+        listDataHeader.add("Live births");
+        listDataHeader.add("High risk");
 
             // Adding child data
         try {

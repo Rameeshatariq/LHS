@@ -2,7 +2,7 @@
 <resources>
 
     <string-array name="hw_hc_list">
-        <item>Health Worker</item>
+        <item>Health worker</item>
     </string-array>
 
     <string-array name="hw_list">
@@ -22,7 +22,7 @@
     <string-array name="facility_outreach">
     <item>Facility</item>
     <item>Outreach</item>
-        <item>Health House</item>
+        <item>Health house</item>
     </string-array>
 
     <string-array name="month">
@@ -41,11 +41,11 @@
     </string-array>
 
     <string-array name="type">
-        <item>Select Type</item>
-        <item>Live Birth</item>
-    <item>Low Birth</item>
-    <item>New Pregnant</item>
-    <item>Total Pregnant</item>
-        <item>High Risk</item>
+        <item>Select type</item>
+        <item>Live birth</item>
+    <item>Low birth</item>
+    <item>New pregnant</item>
+    <item>Total pregnant</item>
+        <item>High risk</item>
     </string-array>
 </resources>

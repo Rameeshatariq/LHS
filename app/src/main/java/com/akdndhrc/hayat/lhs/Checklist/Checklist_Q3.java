@@ -319,7 +319,7 @@ public class Checklist_Q3 extends AppCompatActivity {
                             na_count =0;
                             Log.d("00055", "Update: "+activity_id+" "+result_q1+" "+result_q2+" "+result_q3+" "+result_q4+" "+count);
                         } else {
-                            Toast.makeText(ctx, "Data Not Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data not updated successfully", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
@@ -327,7 +327,7 @@ public class Checklist_Q3 extends AppCompatActivity {
                         isInserted = helper.question3(activity_id, result_q1, result_q2, result_q3, result_q4, result_q5,result_q6, result_q7,
                                 result_q8,result_q9,result_q10,count,no_count,na_count);
                         if(isInserted) {
-                            Toast.makeText(ctx, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data added successfully", Toast.LENGTH_SHORT).show();
                             String update_record = "UPDATE Activities SET " +
                                     "is_synced_checklist='" + String.valueOf(0) + "' " +
                                     "WHERE activity_id = '" + activity_id + "' ";
@@ -389,7 +389,7 @@ public class Checklist_Q3 extends AppCompatActivity {
                             no_count =0;
                             na_count=0;
                         } else {
-                            Toast.makeText(ctx, "Data Not Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data not updated successfully", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
@@ -397,7 +397,7 @@ public class Checklist_Q3 extends AppCompatActivity {
                         isInserted =  helper.question3(activity_id, result_q1, result_q2, result_q3, result_q4, result_q5,result_q6, result_q7,
                                 result_q8,result_q9,result_q10,count,no_count,na_count);
                         if(isInserted) {
-                            Toast.makeText(ctx, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "Data added successfully", Toast.LENGTH_SHORT).show();
                         }
                         Log.d("00055", "Add: "+activity_id+" "+result_q1+" "+result_q2+" "+result_q3+" "+result_q4+" "+count);
                         count = 0;

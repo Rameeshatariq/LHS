@@ -34,7 +34,7 @@
             android:layout_below="@+id/tvMainTitle"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@color/color_white"
-            android:text="Please Wait..."
+            android:text="Please wait..."
             android:textColor="@color/dark_blue_color"
             android:textSize="@dimen/_16sdp" />
 

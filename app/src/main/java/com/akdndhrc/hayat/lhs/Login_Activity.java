@@ -133,7 +133,7 @@ public class Login_Activity extends AppCompatActivity {
             SharedPreferences prefelse = getApplicationContext().getSharedPreferences("UserLogin", 0); // 0 - for private mode
             String shared_username = prefelse.getString("username", null); // getting String
 
-            et_username.setText(shared_username);
+           // et_username.setText(shared_username);
             Log.d("000862", "Last UserName: " + shared_username);
 
         } catch (Exception e) {
@@ -150,13 +150,13 @@ public class Login_Activity extends AppCompatActivity {
 
                 if (et_username.getText().toString().isEmpty()) {
                     //btn_jamaa_kre.setVisibility(View.GONE);
-                    Toast.makeText(getApplicationContext(), "Please Enter Username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please enter username", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (et_password.getText().toString().isEmpty()) {
                     //btn_jamaa_kre.setVisibility(View.GONE);
-                    Toast.makeText(getApplicationContext(), "Please Enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -530,7 +530,6 @@ public class Login_Activity extends AppCompatActivity {
                         //  editorw.putString("password", mData[0][2]);
                         editorw.apply();
 
-
                         final Snackbar snackbar = Snackbar.make(findViewById(R.id.login_layout), "User Login Successfully.", Snackbar.LENGTH_SHORT);
                         View mySbView = snackbar.getView();
                         mySbView.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
@@ -550,6 +549,10 @@ public class Login_Activity extends AppCompatActivity {
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
+
+                                et_username.setText("");
+                                et_password.setText("");
+
                                 Intent intent1 = new Intent(ctx, MainActivity.class);
                                 startActivity(intent1);
 

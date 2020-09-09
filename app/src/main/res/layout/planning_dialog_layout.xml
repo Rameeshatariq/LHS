@@ -43,7 +43,7 @@
             android:tint="@color/pink_color" />
 
         <TextView
-            android:text="Date:"
+            android:text="Date"
             android:textStyle="bold"
             android:textSize="@dimen/_12sdp"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:textSize="@dimen/_12sdp" />
 
         <TextView
-            android:text="Select Health Centre/Health Worker:"
+            android:text="Select health centre/health worker"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/_10sdp"
             android:textSize="@dimen/_12sdp"
@@ -144,7 +144,7 @@
 
         <TextView
             android:id="@+id/tv_hw"
-            android:text="Select Health Worker:"
+            android:text="Select health worker"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/_10sdp"
             android:textSize="@dimen/_12sdp"
@@ -182,7 +182,7 @@
         </RelativeLayout>
 
         <TextView
-            android:text="Select Facility/Outreach:"
+            android:text="Select facility/outreach"
             android:textStyle="bold"
             android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
@@ -232,7 +232,7 @@
 
                 <TextView
                     android:id="@+id/tv_month"
-                    android:text="Select Month:"
+                    android:text="Select month"
                     android:textStyle="bold"
                     android:textSize="@dimen/_12sdp"
                     android:layout_width="match_parent"
@@ -278,7 +278,7 @@
 
             <TextView
                 android:id="@+id/tv_year"
-                android:text="Select Year:"
+                android:text="Select year"
                 android:textStyle="bold"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"

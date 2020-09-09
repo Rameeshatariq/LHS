@@ -751,7 +751,7 @@
                                 android:text="Save"
                                 android:textAllCaps="false"
                                 android:textColor="@color/color_white"
-                                android:textSize="@dimen/_15sdp" />
+                                android:textSize="@dimen/_12sdp" />
 
                             <Button
                                 android:id="@+id/btn_save_next"
@@ -759,12 +759,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/table_layout"
                                 android:layout_marginTop="@dimen/_40sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
                                 android:background="@drawable/login_button_shape_layout"
-                                android:text="Save and Next"
+                                android:text="Save and next"
                                 android:layout_weight="1"
                                 android:textAllCaps="false"
                                 android:textColor="@color/color_white"
-                                android:textSize="@dimen/_15sdp" />
+                                android:textSize="@dimen/_12sdp" />
                         </LinearLayout>
 
 
