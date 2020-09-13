@@ -157,7 +157,7 @@
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:inputType="number"
-                android:maxLength="11"
+                android:maxLength="13"
                 android:background="@drawable/edittext_background_layout"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_12sdp" />

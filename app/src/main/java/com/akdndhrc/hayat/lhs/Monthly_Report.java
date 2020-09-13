@@ -327,7 +327,7 @@ public class Monthly_Report extends AppCompatActivity {
 
         Lister ls = new Lister(ctx);
         ls.createAndOpenDB();
-        String query_form_get_data = "insert into life_birth (member_id, full_name, added_by, month,year)" +
+        String query_form_get_data = "insert into live_birth (member_id, full_name, added_by, month,year)" +
                 " values " +
                 "(" +
                 "'" + child_name+""+father_name + "'," +

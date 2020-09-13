@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class InCompleteActivities_Fragment extends Fragment {
-    ListView activities_List;
+    public static ListView activities_List;
     static ArrayList<String> arrayListDate = new ArrayList<>();
     static ArrayList<String> arrayListactivity = new ArrayList<>();
     static ArrayList<String> arrayListId = new ArrayList<>();

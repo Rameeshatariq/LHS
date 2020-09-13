@@ -1,7 +1,9 @@
 package com.akdndhrc.hayat.lhs.Adapter;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -21,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akdndhrc.hayat.lhs.InCompleteActivities_Fragment;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -109,6 +112,7 @@ public class PreviousActivities_Adapter extends BaseAdapter {
             holder1.activities_lv_status = row.findViewById(R.id.activitySatus);
             holder1.iv_refresh = row.findViewById(R.id.iv_refresh);
             holder1.activities_lv_status.setVisibility(View.GONE);
+            holder1.mView = row;
 
             row.setTag(holder1);
 
@@ -116,25 +120,57 @@ public class PreviousActivities_Adapter extends BaseAdapter {
             holder1 = (ViewHolder) row.getTag();
         }
 
+
         holder1.previous_activities_lv_activity.setText(activity.get(pos));
         holder1.previous_activities_lv_date.setText(arrayListDate.get(pos));
         holder1.previous_activities_lv_id.setText(activity_id.get(pos));
         holder1.activities_lv_status.setText(activity_status.get(pos));
 
-        try {
-            Lister ls=new Lister(ctx);
-            ls.createAndOpenDB();
 
-            lhw = ls.executeReader("Select uid from USERS where username= '" + activity.get(pos) + "'");
-            lhw_uid = lhw[0][0];
+        holder1.mView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Log.d("000666", "onLongClick: ");
 
-            Log.d("000999", "onClick: " + lhw[0][0]);
-            ls.closeDB();
-        }
-        catch(Exception e){
+                new AlertDialog.Builder(ctx)
+                        .setTitle("Alert!")
+                        .setMessage("Are you sure you want to delete this activity?")
+                        .setCancelable(false)
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Lister ls = new Lister(ctx);
+                                ls.createAndOpenDB();
 
-        }
+                                boolean res = ls.executeNonQuery("Delete from Activities where activity_id = '"+holder1.previous_activities_lv_id.getText().toString()+"' ");
 
+                                Log.d("000666", "Query: "+res);
+
+                                if(res){
+                                    Toast.makeText(ctx, "Activity deleted successfully!", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(ctx, MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    ctx.startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText(ctx, "You can't delete this activity!", Toast.LENGTH_SHORT).show();
+                                }
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
+
+
+                return false;
+            }
+        });
 
         try{
             Lister ls= new Lister(ctx);
@@ -206,8 +242,24 @@ public class PreviousActivities_Adapter extends BaseAdapter {
         holder1.iv_refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
 
+                try {
+                    Lister ls=new Lister(ctx);
+                    ls.createAndOpenDB();
+
+                    Log.d("000999", "username: " + activity.get(pos));
+
+                    lhw = ls.executeReader("Select uid from USERS where username= '" + activity.get(pos) + "'");
+                    lhw_uid = lhw[0][0];
+
+                    Log.d("000999", "uid: " + lhw[0][0]);
+                    ls.closeDB();
+                }
+                catch(Exception e){
+
+                }
+
+                try {
                     alertDialog = new Dialog(ctx);
                     LayoutInflater layout = LayoutInflater.from(ctx);
                     final View dialogView = layout.inflate(R.layout.refreshing_dialog, null);
@@ -299,6 +351,22 @@ public class PreviousActivities_Adapter extends BaseAdapter {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(final View view) {
+
+                try {
+                    Lister ls=new Lister(ctx);
+                    ls.createAndOpenDB();
+
+                    Log.d("000999", "username: " + activity.get(pos));
+
+                    lhw = ls.executeReader("Select uid from USERS where username= '" + activity.get(pos) + "'");
+                    lhw_uid = lhw[0][0];
+
+                    Log.d("000999", "uid: " + lhw[0][0]);
+                    ls.closeDB();
+                }
+                catch(Exception e){
+
+                }
 
                 if (holder1.execute.getText().toString().equals("Execute")) {
                     /*if(holder1.activities_lv_status.getText().toString().equals("Completed")){
@@ -401,6 +469,9 @@ public class PreviousActivities_Adapter extends BaseAdapter {
                 }
             }
         });
+
+
+
 
         if (pos % 2 == 0) {
 
@@ -1315,10 +1386,13 @@ public class PreviousActivities_Adapter extends BaseAdapter {
     }
 
     static class ViewHolder {
+
         TextView previous_activities_lv_date, previous_activities_lv_activity, previous_activities_lv_id, activities_lv_status;
         RelativeLayout previous_list_background,rl_left_topbottomcorner;
         Button prepare,execute;
         ImageView iv_refresh;
+        public View mView;
+
     }
 
 }

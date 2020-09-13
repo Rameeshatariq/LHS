@@ -3,6 +3,7 @@ package com.akdndhrc.hayat.lhs;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 
 public class Lister {
@@ -34,6 +35,7 @@ public class Lister {
             sq_db.execSQL(command);
             return true;
         } catch (Exception e) {
+            Log.d("000777", "executeNonQuery: "+e);
             return false;
         }
     }
